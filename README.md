@@ -171,7 +171,7 @@ In complex systems, clarity of architecture matters more than individual feature
 
 ## 🌐 Live Portfolio
 
-👉 *asgharafzal.com*
+👉 *https://asgharafzal.com*
 
 ---
 
