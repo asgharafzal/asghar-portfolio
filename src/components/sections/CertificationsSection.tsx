@@ -43,12 +43,12 @@ export function CertificationsSection() {
         <FadeUp className="mb-14">
           <SectionLabel>Certifications</SectionLabel>
           <SectionTitle>Continuous Learning &<br /><span style={{ color: "var(--ink-600)" }}>Verifiable Growth</span></SectionTitle>
-          {!hasCerts && (
+          {/* {!hasCerts && (
             <p className="mt-4 text-sm font-mono px-4 py-3 rounded-lg inline-block"
               style={{ color: "var(--ink-400)", background: "rgba(232,168,32,0.06)", border: "1px solid rgba(232,168,32,0.15)" }}>
               ✦ Open <code className="text-gold">CertificationsSection.tsx</code> and add your real certifications
             </p>
-          )}
+          )} */}
         </FadeUp>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">

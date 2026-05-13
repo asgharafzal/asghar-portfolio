@@ -3,7 +3,7 @@ import { FadeUp } from "@/components/ui/motion";
 import { SectionLabel, SectionTitle } from "@/components/ui/shared";
 
 const GROUPS = [
-  { label: "Frontend",                  color: "#38BDF8", tags: ["React.js","Next.js","TypeScript","Vue.js","Redux","React Query","Framer Motion","Tailwind CSS","Styled-Components","MUI","Ant Design"] },
+  { label: "Frontend",                  color: "#38BDF8", tags: ["React.js","Next.js","TypeScript","Vue.js","Redux","React Query","GraphQL Client","Tailwind CSS","Styled-Components","MUI/Bootstrap","Ant Design"] },
   { label: "Design Systems",            color: "#A78BFA", tags: ["Storybook","Chromatic","WCAG 2.1","Accessibility","Design Tokens","npm Publishing","Visual Regression"] },
   { label: "Backend & APIs",            color: "#34D399", tags: ["Node.js","Express.js","GraphQL Server","REST API","WebSockets","AWS Lambda","Serverless","Python"] },
   { label: "Cloud & Databases",         color: "#FCD34D", tags: ["AWS Chime SDK","EC2 · S3 · CloudFormation","GCP","Vercel","MongoDB","MySQL","DynamoDB","CI/CD"] },

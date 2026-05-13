@@ -4,9 +4,9 @@ import { SectionLabel, SectionTitle, GoldText } from "@/components/ui/shared";
 
 const JOURNEY = [
   {
-    period: "Jan 2023 – Present", role: "Senior Full Stack Architect . Devloper", company: "InnoSTARK Technologies", type: "current",
+    period: "Jan 2023 – Present", role: "Senior Full Stack Developer · Architect", company: "InnoSTARK Technologies", type: "current",
     bullets: [
-      "Serve as architect for NHS-grade healthcare platforms — owning technology stack selection, cloud infrastructure design, and system architecture decisions that affect thousands of patients across England.",
+      "Serve as engineer for NHS-grade healthcare platforms — owning technology stack selection, cloud infrastructure design, and system architecture decisions that affect thousands of patients across England.",
       "Architected and published a WCAG 2.1-compliant Design System (React + Storybook) to npm and Chromatic — reducing UI inconsistency across 3+ NHS portals by ~40% and cutting new feature UI delivery time significantly.",
       "Designed and built a real-time Video Consultation Platform replacing Jitsi with AWS Chime SDK, Lambda serverless APIs, and GraphQL — achieving zero patient-facing downtime during the full migration.",
       "Integrated AI-augmented development workflows using Claude, Cursor, and GitHub Copilot — accelerating team delivery velocity by ~35% while maintaining NHS-grade code quality and compliance.",
@@ -14,9 +14,9 @@ const JOURNEY = [
     ],
   },
   {
-    period: "Feb 2022 – Dec 2022", role: "Lead Software Engineer", company: "Techbucks", type: "past",
+    period: "Feb 2022 – Dec 2022", role: "Full Stack Developer · Lead Engineer", company: "Techbucks", type: "past",
     bullets: [
-      "Led a cross-functional team of 5 engineers — sprint planning, Jira management, architecture reviews — delivering all projects on schedule with zero missed milestones.",
+      "Led a cross-functional team of 3 engineers — sprint planning, Jira management, architecture reviews — delivering all projects on schedule with zero missed milestones.",
       "Architected a reusable UI component library eliminating ~35% of repetitive development effort across concurrent enterprise projects.",
       "Designed and built RESTful APIs with Node.js/Express.js and MongoDB; owned GCP deployments, CI/CD pipeline configuration, and production infrastructure.",
       "Ran internal engineering knowledge sessions on React architecture, Node.js patterns, and emerging AI-assisted development practices.",

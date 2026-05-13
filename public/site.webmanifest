@@ -1,0 +1,14 @@
+{
+  "name": "Asghar Afzal — Senior Full Stack Architect",
+  "short_name": "Asghar Afzal",
+  "description": "Senior Full Stack Architect · NHS England · React · Next.js · AWS",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#0D0D0D",
+  "theme_color": "#E8A820",
+  "icons": [
+    { "src": "/favicon-16x16.png",  "sizes": "16x16",   "type": "image/png" },
+    { "src": "/favicon-32x32.png",  "sizes": "32x32",   "type": "image/png" },
+    { "src": "/apple-touch-icon.png","sizes": "180x180", "type": "image/png" }
+  ]
+}

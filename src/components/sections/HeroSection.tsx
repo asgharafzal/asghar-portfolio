@@ -29,13 +29,13 @@ export function HeroSection() {
 
           <div>
             {/* Eyebrow */}
-            <motion.div {...FADE(0)} className="flex items-center gap-3 mb-4">
-              <span className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest"
+            <motion.div {...FADE(0)} className="flex flex-col sm:flex-row sm:items-center gap-1.5 sm:gap-3 mb-4">
+              <span className="flex items-center gap-1.5 text-xs font-mono uppercase tracking-widest whitespace-nowrap"
                 style={{ color: "var(--ink-600)" }}>
                 <MapPin size={11} style={{ color: "var(--tag-gold-text)" }} /> Lahore, Pakistan
               </span>
-              <span className="w-px h-3" style={{ background: "var(--border-card)" }} />
-              <span className="flex items-center gap-1.5 text-xs font-mono">
+              <span className="hidden sm:block w-px h-3" style={{ background: "var(--border-card)" }} />
+              <span className="flex items-center gap-1.5 text-xs font-mono whitespace-nowrap">
                 <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "var(--emerald-text)" }} />
                 <span style={{ color: "var(--emerald-text)" }}>Available for Remote &amp; Freelance</span>
               </span>
@@ -46,7 +46,7 @@ export function HeroSection() {
               className="font-extrabold tracking-tight mb-3"
               style={{ color: "var(--ink)" }}>
               <span className="block text-[clamp(2.2rem,4.5vw,4rem)] leading-[1.08]">I Architect Systems</span>
-              <span className="block text-[clamp(1rem,2vw,1.5rem)] leading-[1.4] mt-1" style={{ color: "var(--ink-600)" }}>Full Stack. Cloud-Native. AI-Augmented.</span>
+              <span className="block text-[clamp(1rem,2vw,1.5rem)] leading-[1.4] mt-1" style={{ color: "var(--ink-600)" }}>Full Stack · Cloud-Native · AI-Augmented</span>
               <span className="block text-[clamp(2.2rem,4.5vw,4rem)] leading-[1.08] mt-1">Built for <span className="text-gold-shimmer">Enterprise.</span></span>
             </motion.h1>
 
@@ -96,18 +96,18 @@ export function HeroSection() {
                 style={{ background: "var(--surface)", borderColor: "var(--border-subtle)" }}>
 
                 <div className="flex items-center gap-3 mb-5 pb-4" style={{ borderBottom: "1px solid var(--border-card)" }}>
-                  <div className="w-10 h-10 rounded-xl bg-gold-gradient flex items-center justify-center font-bold text-sm shadow-gold-sm"
+                  <div className="w-10 h-10 rounded-xl bg-gold-gradient flex items-center justify-center font-bold text-sm shadow-gold-sm shrink-0"
                     style={{ color: "#1A1508" }}>AA</div>
-                  <div>
-                    <p className="font-bold text-sm" style={{ color: "var(--ink)" }}>Asghar Afzal</p>
-                    {/* ink-600 on surface verified ≥5.5:1 in light, ≥4.8:1 in dark */}
-                    <p className="text-[10px] font-mono whitespace-nowrap" style={{ color: "var(--ink-600)" }}>Senior Full Stack Architect · Developer</p>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-2">
+                      <p className="font-bold text-sm" style={{ color: "var(--ink)" }}>Asghar Afzal</p>
+                      <span className="shrink-0 emerald-pill text-[10px]">
+                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "currentColor" }} />
+                        Open
+                      </span>
+                    </div>
+                    <p className="text-[10px] font-mono mt-0.5" style={{ color: "var(--ink-600)" }}>Senior Full Stack Architect · Developer</p>
                   </div>
-                  {/* Availability — uses emerald-text which is accessible in both themes */}
-                  <span className="ml-auto emerald-pill text-[10px]">
-                    <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ background: "currentColor" }} />
-                    Open
-                  </span>
                 </div>
 
                 <div className="grid grid-cols-2 gap-px rounded-xl overflow-hidden mb-4"
@@ -137,7 +137,7 @@ export function HeroSection() {
         <div className="max-w-6xl mx-auto px-6 py-5 flex flex-wrap items-center justify-between gap-4">
           <p className="text-xs font-mono uppercase tracking-widest" style={{ color: "var(--ink-600)" }}>At a glance</p>
           <div className="flex flex-wrap gap-x-10 gap-y-2">
-            {["NHS England · Architecture Lead","Enterprise Design Systems","AWS · Serverless · Real-time","AI-Augmented Dev · Claude · Cursor","WCAG 2.1 Compliant"].map(t => (
+            {["NHS England","Enterprise Design Systems","AWS · Serverless · Real-time","AI-Augmented Dev · Claude · Cursor","WCAG 2.1 Compliant"].map(t => (
               <span key={t} className="text-xs font-medium" style={{ color: "var(--ink-600)" }}>{t}</span>
             ))}
           </div>

@@ -1,19 +1,53 @@
 "use client";
 import { FadeUp } from "@/components/ui/motion";
 import { SectionLabel, SectionTitle, GoldText } from "@/components/ui/shared";
-import { Star } from "lucide-react";
+import { Hash } from "lucide-react";
 
 const METRICS = [
-  { label: "Client Satisfaction", value: "100%", sub: "No project left incomplete" },
-  { label: "On-Time Delivery",    value: "100%", sub: "Every milestone met" },
-  { label: "Code Review",         value: "100%", sub: "Zero unreviewed merges" },
-  { label: "Repeat Engagements",  value: "80%+", sub: "Clients who return" },
+  { label: "Client Rating",        value: "4.9/5",  sub: "Across all engagements" },
+  { label: "Faster Delivery",      value: "~35%",   sub: "Via AI-augmented workflow" },
+  { label: "UI Inconsistency Cut", value: "~40%",   sub: "Across NHS portals" },
+  { label: "Repeat Clients",       value: "80%+",   sub: "Return for more projects" },
 ];
 
-const TESTIMONIALS = [
-  { quote: "Asghar didn't just build our Design System — he architected it. The WCAG compliance, the Chromatic pipeline, the npm publishing workflow — everything was production-grade from day one. Our team shipped 3x faster once the system was in place.", name: "James M.", role: "Product Lead", company: "NHS Healthcare Platform", initials: "JM" },
-  { quote: "We brought Asghar in to replace Jitsi on our telemedicine platform. He evaluated AWS Chime SDK, made the technical case for it, built the integration, and led the frontend team through deployment — all with zero patient-facing downtime. Exceptional ownership.", name: "Sarah R.", role: "CTO", company: "Telemedicine Startup", initials: "SR" },
-  { quote: "What separates Asghar from most senior developers is his product thinking. He doesn't just ask 'how do I build this?' — he asks 'should we build this, and if so, what's the right way?' That mindset saved us weeks on our fintech platform.", name: "Ahmed K.", role: "Founder", company: "Fintech Platform", initials: "AK" },
+interface Testimonial {
+  quote: string;
+  name: string;
+  role: string;
+  company: string;
+  initials: string;
+  via: string;
+  date: string;
+}
+
+const TESTIMONIALS: Testimonial[] = [
+  {
+    quote: "A shoutout to Asghar for fine tuning the front-end — tackling a long list of UI requests to pixel perfection. Let's keep this momentum.",
+    name: "Felipe Moscon",
+    role: "Senior Product Designer",
+    company: "Induction Healthcare · NHS",
+    initials: "FM",
+    via: "Slack · NHS Team",
+    date: "Aug 2024",
+  },
+  {
+    quote: "Asghar has been diligently working for both the AttendAnywhere and Zesty teams. He has done some fantastic work across both applications, and a great legacy of high quality work",
+    name: "Ed",
+    role: "Head of Engineering, Zesty",
+    company: "Induction Healthcare · NHS",
+    initials: "E",
+    via: "Slack · NHS Team",
+    date: "2024",
+  },
+  {
+    quote: "Big thanks to Asghar and the GC team — we've accomplished so much in such a short time, despite numerous challenges. Everyone at the Friday showcase was impressed by the work done on GC. We're thrilled about the upcoming launch of the GC feature on New CallScreen.",
+    name: "Fareez Ahmed",
+    role: "Frontend Lead, AttendAnywhere",
+    company: "Induction Healthcare · NHS",
+    initials: "FA",
+    via: "Slack · NHS Team",
+    date: "Apr 2024",
+  },
 ];
 
 export function TrustSection() {
@@ -22,9 +56,10 @@ export function TrustSection() {
       <div className="max-w-6xl mx-auto">
         <FadeUp className="mb-16">
           <SectionLabel>Trust & Reviews</SectionLabel>
-          <SectionTitle>What Teams Say<br /><GoldText>After We Ship</GoldText></SectionTitle>
+          <SectionTitle>What the NHS Team Says<br /><GoldText>After We Ship</GoldText></SectionTitle>
           <p className="mt-4 max-w-xl text-[15px]" style={{ color: "var(--ink-400)" }}>
-            Feedback from clients and engineering leads across healthcare, fintech, and AI platforms.
+            Real feedback from the engineering and product team at{" "}
+            <strong style={{ color: "var(--ink)" }}>Induction Healthcare</strong> — the company behind NHS England&apos;s telemedicine and patient portal platforms.
           </p>
         </FadeUp>
 
@@ -48,20 +83,31 @@ export function TrustSection() {
             <FadeUp key={t.name} delay={i * 0.1}>
               <div className="flex flex-col h-full p-7 rounded-2xl border card-hover"
                 style={{ background: "var(--canvas)", borderColor: "var(--border-card)" }}>
-                <div className="flex gap-0.5 mb-5" aria-label="5 stars">
-                  {[...Array(5)].map((_, j) => <Star key={j} size={12} className="fill-gold text-gold" />)}
+
+                {/* Slack badge + date */}
+                <div className="flex items-center justify-between mb-5">
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full border"
+                    style={{ background: "rgba(74,144,226,0.08)", borderColor: "rgba(74,144,226,0.2)" }}>
+                    <Hash size={10} style={{ color: "#4A90E2" }} />
+                    <span className="text-[10px] font-mono" style={{ color: "#4A90E2" }}>{t.via}</span>
+                  </div>
+                  <span className="text-[10px] font-mono" style={{ color: "var(--ink-600)" }}>{t.date}</span>
                 </div>
+
                 <p className="text-sm leading-relaxed italic flex-1 mb-6" style={{ color: "var(--ink-400)" }}>
                   &ldquo;{t.quote}&rdquo;
                 </p>
+
                 <div className="flex items-center gap-3 pt-5" style={{ borderTop: "1px solid var(--border-card)" }}>
                   <div className="w-9 h-9 rounded-full bg-gold-gradient flex items-center justify-center font-bold text-xs shrink-0"
                     style={{ color: "#1A1508" }}>{t.initials}</div>
                   <div>
                     <p className="font-semibold text-sm" style={{ color: "var(--ink)" }}>{t.name}</p>
-                    <p className="text-[11px]" style={{ color: "var(--ink-600)" }}>{t.role} · {t.company}</p>
+                    <p className="text-[11px]" style={{ color: "var(--ink-600)" }}>{t.role}</p>
+                    <p className="text-[10px] font-mono mt-0.5" style={{ color: "var(--tag-gold-text)" }}>{t.company}</p>
                   </div>
                 </div>
+
               </div>
             </FadeUp>
           ))}
